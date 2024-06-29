@@ -9,53 +9,41 @@ function getProducts() {
     //For every element in cart
     let sum = 0
     shoppingList.forEach((element, elemIndex) => {
-        let producto = document.createElement('div');
+        let product = document.createElement('div');
 
-        let nombre = document.createElement('p');
-        let cantidad = document.createElement('p');
-        let precio = document.createElement('p')
+        let name = document.createElement('p');
+        name.innerHTML = element.title
+        product.appendChild(name)
+
+        let subtract = document.createElement('button')
+        subtract.innerHTML = "-"
+        product.appendChild(subtract)
+        
+        let quantity = document.createElement('p');
+        quantity.innerHTML = element.quantity
+        product.appendChild(quantity)
 
         let add = document.createElement('button')
-        let subtract = document.createElement('button')
-        let cantidadDiv = document.createElement('div')
+        add.innerHTML = "+"
+        product.appendChild(add)
 
+        let price = document.createElement('p')
+        price.innerHTML = `${(element.quantity * element.price).toFixed(2)}$`
+        let quantityDiv = document.createElement('div')
+        quantityDiv.appendChild(price)
+
+        product.appendChild(quantityDiv)
+        shopListDiv.appendChild(product)
 
         add.addEventListener('click', () => addElement(elemIndex))
         subtract.addEventListener('click', () => subtractElement(elemIndex))
 
-
-        nombre.innerHTML = element.title
-        cantidad.innerHTML = element.quantity
-
-        precio.innerHTML = `${(element.quantity * element.price).toFixed(2)}$`
-
         sum += element.quantity * element.price
-        console.log(sum)
-        add.innerHTML = "+"
-        subtract.innerHTML = "-"
-
-        producto.appendChild(nombre)
-        producto.appendChild(subtract)
-        producto.appendChild(cantidad)
-        producto.appendChild(add)
-
-        cantidadDiv.appendChild(precio)
-
-
-
         localStorage.setItem('total', sum)
-        producto.appendChild(cantidadDiv)
-
-        shopListDiv.appendChild(producto)
-
-
     });
 
-    let total = document.createElement('h2')
-    total.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)
-    total.className = "total"
-    shopListDiv.appendChild(total)
-
+    let totalEl = document.querySelector('.total')
+    totalEl.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)+"$"
 }
 
 
