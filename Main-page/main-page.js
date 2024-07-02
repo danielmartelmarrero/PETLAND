@@ -17,7 +17,7 @@ document.getElementById('products').onchange = selectProduct
 function selectProduct(){
     let product = document.getElementById('products').value
     if(product=='Products'){
-        window.location.href ="./main-page.html"
+        window.location.href ="./index.html"
     }
     if(product == 'Dogs'){
         const catProduct = [...document.getElementsByClassName("cat-products")]
