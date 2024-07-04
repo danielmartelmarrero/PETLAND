@@ -13,6 +13,7 @@ function getProducts() {
         let product = document.createElement('div');
 
         let name = document.createElement('p');
+        name.id = "product-name"
         name.innerHTML = element.title
         product.appendChild(name)
 
@@ -42,8 +43,11 @@ function getProducts() {
         sum += element.quantity * element.price
         localStorage.setItem('total', sum)
     });
-
+    
     let totalEl = document.querySelector('.total')
+    if(shopListDiv.length==0){
+        totalEl.innerHTML = ''
+    }
     totalEl.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)+"$"
     
 }

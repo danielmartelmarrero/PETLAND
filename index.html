@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-    *{
+
+    * {
         font-family: "Kanit", sans-serif;
         margin: 0;
     }
-    @media(min-width: 1000px){
-        nav{
+
+    .logo {
+        width: 100%;
+        height: 130px;
+    }
+
+    nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 5em;
         background-color: #c6d420;
-        
+
     }
-    .logo{
-        width: 100%;
-        height: 150px;
-    }
-    #search-bar{
-    width: 90%;
-    margin: 2% 5%;
-    height: 40px;
-}
-    nav img{
+
+    nav img {
         background-color: #c6d420;
         height: 80%;
     }
-    nav select{
+
+    nav select {
         font-family: "Kanit", sans-serif;
         border: none;
         background-color: #c6d420;
@@ -42,186 +41,212 @@
         height: 80%;
         margin: 0 10%;
     }
-    nav button{
+
+    nav button {
         font-family: "Kanit", sans-serif;
         font-size: 20px;
         background-color: #c6d420;
         border: none;
         height: 80%;
-        margin: 0 7%;
+        margin: 0 15px;
     }
-    #all-products{
+
+    #search-bar {
+        width: 90%;
+        margin: 2% 5%;
+
+    }
+
+    #all-products {
         margin: 5% 5%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
-    #all-products button{
-        border: none;
-        background-color: white;
-        box-shadow: 2px 2px 8px;
-    }
-    #all-products div{
+
+    #all-products div {
         display: flex;
         flex-direction: column;
         width: 20%;
         padding: 2%;
         margin: 2% 2%;
     }
-    .product-image{
-        width: 100%;
-    }
-    footer{
-        width: 100%;
-        display: flex;
-        font-size: 1.5em;
-        background-color: #3a3c39;
-    }
-    footer div{
-        margin-left: 15%;
-        margin-top: 3%;
-        margin-bottom: 3%;
-        color: #c6d420;
-    }
-    }
-
-    @media(max-width: 898px){
-        nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 4em;
-        background-color: #c6d420;
-        
-    }
-    .logo{
-        width: 100%;
-        
-    }
-    #search-bar{
-    width: 90%;
-    margin: 2% 5%;
-    height: 30px;
-}
-    nav img{
-        background-color: #c6d420;
-        height: 80%;
-    }
-    nav select{
-        font-family: "Kanit", sans-serif;
-        border: none;
-        background-color: #c6d420;
-        font-size: 20px;
-        height: 80%;
-        margin: 0 15px;
-    }
-    nav button{
-        font-family: "Kanit", sans-serif;
-        font-size: 20px;
-        background-color: #c6d420;
-        border: none;
-        height: 80%;
-        margin: 0 15px;
-    }
-    #all-products{
-        margin: 5% 5%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    #all-products button{
+    .product-image {
+            width: 100%;
+        }
+    #all-products button {
         border: none;
         background-color: white;
         box-shadow: 2px 2px 8px;
     }
-    #all-products div{
-        display: flex;
-        flex-direction: column;
-        width: 40%;
-        padding: 2%;
-        
-        margin: 2% 2%;
-    }
-    .product-image{
-        width: 100%;
-    }
-    footer{
+    footer {
         width: 100%;
         background-color: #3a3c39;
-    }
+        }
     footer div{
-        margin-left: 5%;
-        margin-bottom: 3%;
         color: #c6d420;
     }
+
+    @media(min-width: 1000px) {
+        nav {
+            height: 5em;
+        }
+
+        .logo {
+            width: 40%;
+            height: 150px;
+        }
+
+        #search-bar {
+            height: 40px;
+        }
+
+        nav select {
+            font-size: 25px;
+        }
+
+        nav button {
+            font-size: 25px;
+            margin: 0 7%;
+        }
+        footer {
+            display: flex;
+            font-size: 1.5em;
+        }
+        footer div {
+            margin-left: 15%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+
+        }
     }
-  
+    @media(max-width: 898px) {
+        nav {
+            height: 4em;
+        }
+
+        #search-bar {
+            height: 30px;
+        }
+
+        #all-products div {
+            width: 40%;
+        }
+        footer div {
+            margin-left: 5%;
+            margin-bottom: 3%;
+        }
+    }
 </style>
 
 <body>
-    <img onclick="window.location.href='./index.html' " class="logo" src="https://imgs.search.brave.com/Nz8GuzveBpPGhiSOcIokR9V2SnC5PK73-ofvsMB5sZc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy1kb3dubG9hZC5j/b20vd3AtY29udGVu/dC91cGxvYWRzLzIw/MjEvMDEvUGV0bGFu/ZF9Mb2dvLTcwMHgx/NjUucG5n" alt="">
-    <form >
+    <img onclick="window.location.href='./index.html' " class="logo"
+        src="https://imgs.search.brave.com/RUtvGTMBS74koqWaVYxKIcZxrbHKjnw-5wUX2NFB0II/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2ZhLzgz/LzcxL2ZhODM3MTgx/MmJhYzdjMTQ0Njg5/MjU0ZjY3N2NhOTYy/LmpwZw"
+        alt="">
+    <form>
         <input id="search-bar" type="text" placeholder="Search products for your friend">
     </form>
     <nav>
-        <select id="products" >
-            <option value="Products">Products<s/option>
+        <select id="products">
+            <option value="Products">Products</option>
             <option value="Dogs">Dogs</option>
             <option value="Cats">Cats</option>
             <option value="Rabbits">Rabbits</option>
             <option value="Birds">Birds</option>
         </select>
         <button onclick="alert('There´s a Petland shop at 2km from your current location.')">Shops</button>
-        <button onclick="window.location.href='./Shopping-cart/cart.html'"><img src="https://imgs.search.brave.com/ZoaTMOOzHpyyHXiVQzwvSNOEYnielntmzs9up_py50s/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vZmljL2lt/YWdlcy9pY29ucy8x/NjgxL3NpZW5hLzI1/Ni9zaG9wcGluZ19i/YXNrZXRfcmVkLnBu/Zz9mbXQ" alt=""></button>
+        <button onclick="window.location.href='./Shopping-cart/cart.html'"><img
+                src="https://imgs.search.brave.com/ZoaTMOOzHpyyHXiVQzwvSNOEYnielntmzs9up_py50s/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuZnJlZWltYWdl/cy5jb20vZmljL2lt/YWdlcy9pY29ucy8x/NjgxL3NpZW5hLzI1/Ni9zaG9wcGluZ19i/YXNrZXRfcmVkLnBu/Zz9mbXQ"
+                alt=""></button>
     </nav>
     <section id="all-products">
         <div class="dog-products">
-            <button onclick="saveInfo('Nutrikoa for Dogs','https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg','20.98','Alimento completo para perros adultos de razas grandes a partir de los 15 meses')"><img class="product-image" src="https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg" alt="Nutrika for dogs"></button>
+            <button
+                onclick="saveInfo('Nutrikoa for Dogs','https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg','20.98','Alimento completo para perros adultos de razas grandes a partir de los 15 meses')"><img
+                    class="product-image"
+                    src="https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg"
+                    alt="Nutrika for dogs"></button>
             <span id="product-title">Nutrikoa for Dogs</span>
             <span id="product-title">20.98$</span>
-            <button onclick="addToCart('Nutrikoa for Dogs','https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg','20.98')">ADD</button>
+            <button
+                onclick="addToCart('Nutrikoa for Dogs','https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg','20.98')">ADD</button>
         </div>
         <div class="rabbit-products">
-            <button onclick="saveInfo('Vital Menu Rabbits', 'https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg','10.99','Vitakraft Menú Vital es la base perfecta para una dieta completa y saludable de los conejos enanos adultos.')"><img class="product-image" src="https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg" alt="Vital menu Rabbits"></button>
+            <button
+                onclick="saveInfo('Vital Menu Rabbits', 'https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg','10.99','Vitakraft Menú Vital es la base perfecta para una dieta completa y saludable de los conejos enanos adultos.')"><img
+                    class="product-image"
+                    src="https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg"
+                    alt="Vital menu Rabbits"></button>
             <span id="product-title">Vital Menu Rabbits</span>
             <span id="product-title">10.99$</span>
-            <button onclick="addToCart('Vital Menu Rabbits', 'https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg','10.99')">ADD</button>
+            <button
+                onclick="addToCart('Vital Menu Rabbits', 'https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg','10.99')">ADD</button>
         </div>
         <div class="cat-products">
-            <button onclick="saveInfo('Cat`s protein','https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg','12.95','Banters Cat Sterilized Fish & Rice es un alimento completo para gatos adultos esterilizados a partir de los 12 meses de edad.')"><img class="product-image" src="https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg" alt="Cat`s protein"></button>
+            <button
+                onclick="saveInfo('Cat`s protein','https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg','12.95','Banters Cat Sterilized Fish & Rice es un alimento completo para gatos adultos esterilizados a partir de los 12 meses de edad.')"><img
+                    class="product-image"
+                    src="https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg"
+                    alt="Cat`s protein"></button>
             <span id="product-title">Cat`s protein</span>
             <span id="product-title">12.95$</span>
-            <button onclick="addToCart('Cat`s protein','https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg','12.95')">ADD</button>
+            <button
+                onclick="addToCart('Cat`s protein','https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg','12.95')">ADD</button>
         </div>
         <div class="bird-products">
-            <button onclick="saveInfo('Parrot fruits','https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg', '5.95','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img class="product-image" src="https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg" alt="Parrot fruits"></button>
+            <button
+                onclick="saveInfo('Parrot fruits','https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg', '5.95','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img
+                    class="product-image"
+                    src="https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg"
+                    alt="Parrot fruits"></button>
             <span id="product-title">Parrot fruits</span>
             <span id="product-title">5.95$</span>
-            <button onclick="addToCart('Parrot fruits','https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg', '5.95')">ADD</button>
+            <button
+                onclick="addToCart('Parrot fruits','https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg', '5.95')">ADD</button>
         </div>
         <div class="dog-products">
-            <button onclick="saveInfo('Pro Plan Diet','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385', '38.69','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img class="product-image" src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385" alt="Pro Plan diet"></button>
+            <button
+                onclick="saveInfo('Pro Plan Diet','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385', '38.69','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img
+                    class="product-image"
+                    src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385"
+                    alt="Pro Plan diet"></button>
             <span id="product-title">Pro Plan Diet</span>
             <span id="product-title">38.69</span>
-            <button onclick="addToCart('Pro Plan Diet','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385', '38.69')">ADD</button>
+            <button
+                onclick="addToCart('Pro Plan Diet','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385', '38.69')">ADD</button>
         </div>
         <div class="dog-products">
-            <button onclick="saveInfo('Libra Adult Salmón','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385', '40.95','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img class="product-image" src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385" alt="Libra Adult Salmón"></button>
+            <button
+                onclick="saveInfo('Libra Adult Salmón','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385', '40.95','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img
+                    class="product-image"
+                    src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385"
+                    alt="Libra Adult Salmón"></button>
             <span id="product-title">Libra Adult Salmón</span>
             <span id="product-title">40.95$</span>
-            <button onclick="addToCart('Libra Adult Salmón','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385', '40.95')">ADD</button>
+            <button
+                onclick="addToCart('Libra Adult Salmón','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385', '40.95')">ADD</button>
         </div>
         <div class="cat-products">
-            <button onclick="saveInfo('Natures Variety','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385','35.95','Banters Cat Sterilized Fish & Rice es un alimento completo para gatos adultos esterilizados a partir de los 12 meses de edad.')"><img class="product-image" src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385" alt="Cat`s protein"></button>
+            <button
+                onclick="saveInfo('Natures Variety','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385','35.95','Banters Cat Sterilized Fish & Rice es un alimento completo para gatos adultos esterilizados a partir de los 12 meses de edad.')"><img
+                    class="product-image"
+                    src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385"
+                    alt="Cat`s protein"></button>
             <span id="product-title">Natures Variety</span>
             <span id="product-title">35.95$</span>
-            <button onclick="addToCart('Natures Variety','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385','35.95')">ADD</button>
+            <button
+                onclick="addToCart('Natures Variety','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385','35.95')">ADD</button>
         </div>
         <div class="cat-products">
-            <button onclick="saveInfo('Advance Adult','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385','9.95','Banters Cat Sterilized Fish & Rice es un alimento completo para gatos adultos esterilizados a partir de los 12 meses de edad.')"><img class="product-image" src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385" alt="Cat`s protein"></button>
+            <button
+                onclick="saveInfo('Advance Adult','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385','9.95','Banters Cat Sterilized Fish & Rice es un alimento completo para gatos adultos esterilizados a partir de los 12 meses de edad.')"><img
+                    class="product-image"
+                    src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385"
+                    alt="Cat`s protein"></button>
             <span id="product-title">Advance Adult</span>
             <span id="product-title">9.95$</span>
-            <button onclick="addToCart('Advance Adult','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385','9.95')">ADD</button>
+            <button
+                onclick="addToCart('Advance Adult','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385','9.95')">ADD</button>
         </div>
     </section>
     <footer>
@@ -254,6 +279,7 @@
             </ul>
         </div>
     </footer>
-  <script src="./main-page.js"></script>  
+    <script src="./main-page.js"></script>
 </body>
+
 </html>
