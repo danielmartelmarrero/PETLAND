@@ -45,9 +45,6 @@ function getProducts() {
     });
     
     let totalEl = document.querySelector('.total')
-    if(shopListDiv.length==0){
-        totalEl.innerHTML = ''
-    }
     totalEl.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)+"$"
     
 }
