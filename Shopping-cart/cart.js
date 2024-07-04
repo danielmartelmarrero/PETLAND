@@ -5,6 +5,7 @@ function getProducts() {
     let shoppingList = JSON.parse(localStorage.getItem('cart'))
     let shopListDiv = document.getElementById("shopList-div")
     shopListDiv.innerHTML = ''
+    
     console.log(shoppingList)
     //For every element in cart
     let sum = 0
@@ -44,6 +45,7 @@ function getProducts() {
 
     let totalEl = document.querySelector('.total')
     totalEl.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)+"$"
+    
 }
 
 
