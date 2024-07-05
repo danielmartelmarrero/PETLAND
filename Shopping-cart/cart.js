@@ -43,13 +43,22 @@ function getProducts() {
         sum += element.quantity * element.price
         localStorage.setItem('total', sum)
     });
-    
+
     let totalEl = document.querySelector('.total')
-    totalEl.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)+"$"
+    
+    if((JSON.parse(localStorage.getItem('cart')).length==0)){
+        totalEl.innerHTML = ''
+    }
+    else{
+        totalEl.innerHTML = (JSON.parse(localStorage.getItem('total'))).toFixed(2)+"$"
+    }
     
 }
 
-
+let totalEl = document.querySelector('.total')
+    if(JSON.parse(localStorage.getItem('cart').length==0)){
+        totalEl.innerHTML = ''
+    }
 function addElement(elemIndex) {
     let carrito = JSON.parse(localStorage.getItem('cart'))
     carrito[elemIndex].quantity += 1
@@ -72,6 +81,10 @@ function subtractElement(elemIndex) {
 function pay() {
     localStorage.removeItem('cart')
     window.location.href = "../Shopping-cart/cart.html"
+    const myCart = document.getElementById("shopList-header")
+    const thanksDiv = document.createElement('h4')
+    thanksDiv.innerHTML = "Thank you for trusting Petland to take care of your little friend."
+    myCart.appendChild(thanksDiv)
 }
 
 

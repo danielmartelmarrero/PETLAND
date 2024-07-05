@@ -14,7 +14,6 @@
         font-family: "Kanit", sans-serif;
         margin: 0;
     }
-    
     .logo {
         width: 100%;
         height: 130px;
@@ -53,8 +52,7 @@
     }
 
     #search-bar {
-        border-radius: 20px;
-        background-color: #d9b98c;
+        border-radius: 10px;
         width: 90%;
         margin: 2% 5%;
 
@@ -65,12 +63,13 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-    }
 
+    }
+    
     #all-products div {
         display: flex;
         flex-direction: column;
-        width: 20%;
+        width: 15%;
         padding: 2%;
         margin: 2% 2%;
     }
@@ -79,9 +78,11 @@
         }
     #all-products button {
         border: none;
+        margin-bottom: 20px;
         background-color: white;
         box-shadow: 2px 2px 8px;
     }
+    
     footer {
         width: 100%;
         background-color: #d9b98c;
@@ -111,6 +112,13 @@
         nav button {
             font-size: 25px;
             margin: 0 7%;
+        }
+        #all-products span{
+            font-size: 25px;
+        }
+        .add-button{
+            font-size: 25px;
+            height: 40px;
         }
         footer {
             display: flex;
@@ -171,7 +179,7 @@
                     alt="Nutrika for dogs"></button>
             <span id="product-title">Nutrikoa for Dogs</span>
             <span id="product-title">20.98$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Nutrikoa for Dogs','https://koalamascotas.com/662762-home_default/nutrikoa-cachorro-pollo-12-kg.jpg','20.98')">ADD</button>
         </div>
         <div class="rabbit-products">
@@ -182,7 +190,7 @@
                     alt="Vital menu Rabbits"></button>
             <span id="product-title">Vital Menu Rabbits</span>
             <span id="product-title">10.99$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Vital Menu Rabbits', 'https://koalamascotas.com/666424-home_default/vitakraft-menu-vital-conejo-3-kg.jpg','10.99')">ADD</button>
         </div>
         <div class="cat-products">
@@ -193,7 +201,7 @@
                     alt="Cat`s protein"></button>
             <span id="product-title">Cat`s protein</span>
             <span id="product-title">12.95$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Cat`s protein','https://koalamascotas.com/668720-home_default/banters-cat-sterilised-pescado-2-kg.jpg','12.95')">ADD</button>
         </div>
         <div class="bird-products">
@@ -204,7 +212,7 @@
                     alt="Parrot fruits"></button>
             <span id="product-title">Parrot fruits</span>
             <span id="product-title">5.95$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Parrot fruits','https://koalamascotas.com/687282-home_default/ica-vit-pro-fruit-800-gr.jpg', '5.95')">ADD</button>
         </div>
         <div class="dog-products">
@@ -215,18 +223,18 @@
                     alt="Pro Plan diet"></button>
             <span id="product-title">Pro Plan Diet</span>
             <span id="product-title">38.69</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Pro Plan Diet','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw0acf4d34/images/pienso_perros_purina_pro_plan_adult_veterinary_diets_hypoallergenic_ha_PVD12158519_M.jpg?sw=385&sh=385', '38.69')">ADD</button>
         </div>
         <div class="dog-products">
-            <button
+            <button 
                 onclick="saveInfo('Libra Adult Salmón','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385', '40.95','Fórmula totalmente equilibrada para la perfecta salud de las mascotas.')"><img
                     class="product-image"
                     src="https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385"
                     alt="Libra Adult Salmón"></button>
             <span id="product-title">Libra Adult Salmón</span>
             <span id="product-title">40.95$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Libra Adult Salmón','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dw4f18113b/images/pienso_perros_libra_adult_salmon_15kg_01_LIB500562.jpg?sw=385&sh=385', '40.95')">ADD</button>
         </div>
         <div class="cat-products">
@@ -237,7 +245,7 @@
                     alt="Cat`s protein"></button>
             <span id="product-title">Natures Variety</span>
             <span id="product-title">35.95$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Natures Variety','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwddb3d317/images/comida_gato_natures_variety_selected_pollo_gato_NTV927182.jpg?sw=385&sh=385','35.95')">ADD</button>
         </div>
         <div class="cat-products">
@@ -248,7 +256,7 @@
                     alt="Cat`s protein"></button>
             <span id="product-title">Advance Adult</span>
             <span id="product-title">9.95$</span>
-            <button
+            <button class = "add-button"
                 onclick="addToCart('Advance Adult','https://www.kiwoko.com/dw/image/v2/BDLQ_PRD/on/demandware.static/-/Sites-kiwoko-master-catalog/default/dwb811ab8c/images/comida_gatos_advance_affinity_adult_pollo_arroz_52054_M_AB24%20(1).png?sw=385&sh=385','9.95')">ADD</button>
         </div>
     </section>
